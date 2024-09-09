@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 header nav {
@@ -62,7 +63,7 @@ header nav ul li a:hover {
 }
 
 .aboutus-left h2 {
-    font-size: 2em;
+    font-size: 6em;
     color: #333;
     text-align: left;
 }
@@ -73,6 +74,11 @@ header nav ul li a:hover {
     max-width: 600px;
     margin-top: 20px;
     text-align: left;
+}
+
+#members h2, #members p {
+    text-align: center;
+    color: white;
 }
 
 @keyframes scrollIn {
@@ -265,4 +271,122 @@ header nav ul li a:hover {
 
 body {
     background-color: black;
+}
+
+.members-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.member-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 22%;
+    margin: 10px 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0077b5; /* LinkedIn blue color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#Projects {
+    padding: 50px 0;
+    background-color: #f0f0f0; /* Optional background color */
+}
+
+#Projects h2, #Projects p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: top;
+    height: 350px; /* Longer height for project cards */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Add hover effect */
+}
+
+.project-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.project-card a {
+    color: #0077b5; /* LinkedIn blue or project link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Container for 3 projects per row */
+#Projects .project-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-card {
+        width: 90%;
+    }
 }
