@@ -5,24 +5,46 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+header nav {
+    position: fixed; /* Fix the nav to the viewport */
+    top: 10px; /* Position it at the top */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally by adjusting the X axis */
+    background-color: #333;
+    border-radius: 50px; /* Make it a rounded rectangle */
+    padding: 10px 40px; /* Adjust padding for stretched horizontal content */
+    width: 80%; /* Stretch it across most of the screen width */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
+    margin: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: space-around; /* Evenly space items horizontally */
+    align-items: center;
 }
 
 header nav ul li {
-    margin: 0;
+    margin: 0 10px; /* Space out the items horizontally */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 15px;
+    padding: 10px 20px;
     display: block;
+    text-align: center;
+    border-radius: 50px; /* Make the links themselves rounded */
+    background-color: #444; /* Link background color */
+    transition: background-color 0.3s ease;
 }
+
+header nav ul li a:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
 
 .aboutus {
     display: flex;
