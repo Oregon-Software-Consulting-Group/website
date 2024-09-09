@@ -331,7 +331,11 @@ a:hover {
 
 /* Project Cards */
 .project-card {
-    background-color: white;
+    background-image: url('background0.png'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    color: white; /* Ensure text color is readable over the background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 20%;
@@ -391,13 +395,14 @@ a:hover {
     }
 }
 
-.center{
+.center {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 20px; 
 }
 
-#Projects p , #Projects h2{
+#Projects p, #Projects h2 {
     color: white;
 }
+
