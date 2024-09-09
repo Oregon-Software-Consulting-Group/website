@@ -34,7 +34,9 @@ header nav ul li a {
 .aboutus-left {
     width: 50%;
     padding: 20px;
-    animation: scrollIn 2s ease-out forwards, translateText 3s ease-in-out forwards;
+    opacity: 0; /* Start invisible */
+    transform: translateY(100px); /* Start slightly lower */
+    animation: scrollIn 2s ease-out forwards; /* Animation for fade-in and translate */
 }
 
 .aboutus-left h2 {
@@ -50,6 +52,14 @@ header nav ul li a {
     margin-top: 20px;
     text-align: left;
 }
+
+@keyframes scrollIn {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to the original position */
+    }
+}
+
 
 .card {
     width: 500px;
@@ -71,6 +81,15 @@ header nav ul li a {
     opacity: 0;
     transform: rotate(10deg);
     transition: all 0.5s ease-in-out;
+}
+
+
+.card .p {
+    transition: opacity 0.3s ease; /* Smooth transition for disappearance */
+}
+
+.card:hover .p {
+    opacity: 0; /* Make the paragraph invisible */
 }
 
 .card .bottom-text {
@@ -220,4 +239,8 @@ header nav ul li a {
     100% {
         transform: translateX(0);
     }
+}
+
+body {
+    background-color: black;
 }
