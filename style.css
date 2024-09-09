@@ -92,7 +92,7 @@ header nav ul li a:hover {
 .card {
     width: 500px;
     height: 330px;
-    background: #243137;
+    background: #000000;
     position: relative;
     margin-right: 55px;
     display: grid;
@@ -129,7 +129,7 @@ header nav ul li a:hover {
     text-transform: uppercase;
     padding: 0px 5px 0px 8px;
     color: #bd9f67;
-    background: #243137;
+    background: #000000;
     opacity: 0;
     letter-spacing: 7px;
     transition: all 0.5s ease-in-out;
@@ -389,4 +389,15 @@ a:hover {
     .project-card {
         width: 90%;
     }
+}
+
+.center{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px; 
+}
+
+#Projects p , #Projects h2{
+    color: white;
 }
